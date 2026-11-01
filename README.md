@@ -1,6 +1,9 @@
 # DEVINFO.BIN
 
-Small external diagnostic utility for x16-PRos.
+System diagnostics utility for
+**[x16-PRos](https://github.com/PRoX2011/x16-PRos)** by PRoX2011.
+
+## Features
 
 Version 0.2 shows:
 
@@ -14,13 +17,6 @@ Version 0.2 shows:
 - a separate available-disks page using the native filesystem API.
 
 Controls: `R` refreshes the overview, `D` opens the disk list, `Esc` exits.
-The overview is a snapshot, not a continuously refreshing monitor. Waiting
-for input yields to background tasks. The program hides the mouse cursor
-before clearing the screen and restores its original visibility on exit.
-Memory figures are explicitly distinguished: BIOS conventional memory is
-not the same as free heap memory. BIOS ticks are not system uptime.
-
-This project is intentionally outside the `x16-PRos/` reference checkout.
 
 ## Build
 
@@ -43,11 +39,6 @@ Install the resulting file into `BIN.DIR` on an x16-PRos disk image and run:
 ```text
 DEVINFO
 ```
-
-## Scope
-
-This is an application project, not a modification of the operating system.
-The API contract is documented in `../x16-PRos/docs/API.md`.
 
 ## Tests
 
